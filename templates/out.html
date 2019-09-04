@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <title>Thanks</title>
+    <style>
+        .head{
+            font-family: "Courier";
+            color: darkgreen;
+            text-shadow: 1.5px 1.5px blue;
+        }
+        .vdo{
+            border: solid white 1px;
+            background-image: linear-gradient(lightblue,lightblue,white);
+            padding-top: 5px;
+            height: 150%;
+        }
+        .vdo:hover{
+            background-image: linear-gradient(blue,white);
+
+        }
+        .button1 {
+			background-color: blue;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			transition : 0.2s;
+			border-radius : 5%;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+		    width: 90%;
+		}
+		.button1:hover {
+			background-color : orange;
+			border : none;
+			color : brown;
+			border-radius: 5%;
+			width: 100%;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+		}
+        .button2 {
+			background-color: orange;
+			border: none;
+			color: darkgreen;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			transition : 0.2s;
+			border-radius : 5%;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+		    width: 90%;
+		}
+		.button2:hover {
+			background-color : orangered;
+			border : none;
+			color : white;
+			border-radius: 5%;
+			width: 100%;
+			font-family: "Comic Sans MS", cursive, sans-serif;
+		}
+        .subdiv{width: 100%;}
+    </style>
+    <script type="text/javascript">
+       var can, ctx, addAngle, addScale, step, steps = 150,
+              delay = 20;
+
+        function init() {
+            can = document.getElementById("MyCanvas1");
+            ctx = can.getContext("2d");
+            ctx.fillStyle = "blue";
+            ctx.font = "20pt Helvetica";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            addAngle = Math.PI * 2 / steps;
+            addScale = 1 / steps;
+            step = 0;
+            RotateTextSphere()
+        }
+
+        function RotateTextSphere() {
+            step++;
+            ctx.clearRect(0, 0, can.width, can.height);
+            ctx.save();
+            ctx.translate(can.width / 2, can.height / 2);
+            ctx.scale(addScale * step, addScale * step);
+            ctx.rotate(addAngle * step);
+            ctx.fillText("Please Give Feedback", 0, 0);
+            ctx.fillText("Please Give Feedback", 0, 0);
+            ctx.fillText("Please Give Feedback", 0, 0);
+            ctx.fillText("Please Give Feedback", 0, 0);
+            ctx.fillText("Please Give Feedback", 0, 0);
+            ctx.fillText("Please Give Feedback", 0, 0);
+            ctx.restore();
+            if (step < steps)
+                var t = setTimeout('RotateTextSphere()', 15);
+        }
+    </script>
+</head>
+<body onload="init();toast();">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12" align="center">
+                <br>
+                <h2 class="head"><strong>Successfully</strong></h2>
+                <h2 class="head"><strong>Logged Out</strong></h2>
+                <br>
+            </div>
+        </div>
+        <div class="row">
+            <div align="center">
+                <a href="/"><strong><input class="button1" type="submit" value="Home"></strong></a>
+            </div>
+        </div>
+    </div>
+    <div class="container" align="center" style="padding-top: 10px;">
+        <div class="vdo">
+            <video width="50%" height="70%" controls autoplay>
+                <source src="../static/video/thanks2.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="subdiv">
+             <canvas id="MyCanvas1" width="300" height="200"></canvas>
+        </div>
+
+        <div class="vdo">
+            <video width="85%" height="100%" controls autoplay loop>
+                <source src="../static/video/thanks.mp4" type="video/mp4">
+            </video>
+        </div>
+        <br><br><br><br>
+        <div>
+            <div align="center">
+                <a href="/"><strong><input class="button1" type="submit" value="Login"></strong></a>
+            </div>
+            <div align="center">
+                <a href="http://shbajpayee.pythonanywhere.com"><strong><input class="button2" type="submit" value="Give Feedback"></strong></a>
+            </div>
+        </div>
+        <br><br><br><br>
+        <p></p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

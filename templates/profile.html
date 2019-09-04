@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Profile</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<style>
+        #broke{
+            width: 80%;
+            height: 80%;
+        }
+        h1{
+            text-align: center;
+            font-family: "Courier";
+            color: darkolivegreen;
+            text-shadow: 1.5px 1.5px darkslategrey;
+        }
+        h4{
+            text-align: center;
+        }
+        .img{
+            width: 20%;
+            height: 20%;
+        }
+        .img2{
+            width: 60%;
+            height: 60%;
+        }
+        #head{
+            font-size: 170%;
+            font-family: "Courier";
+            color: blue;
+            text-shadow: 1.5px 1.5px orangered;
+        }
+        #body{
+            font-family: "Courier";
+            font-size: 120%;
+            color: darkslategray;
+            text-shadow: 1px 1px darkslategrey;
+        }
+        .marquee{
+            color: darkgreen;
+            margin: 5px auto;
+        }
+        .head{
+            box-shadow: 1px 5px 10px 2px slategrey;
+            border-radius: 5px;
+        }
+        .head:hover{
+            box-shadow: 1px 1px 8px 1px slategrey;
+            border-radius: 5px;
+        }
+        #bdy{
+            box-shadow: 1px 5px 10px 5px slategrey;
+            border-radius: 10px;
+        }
+        #bdy:hover{
+            box-shadow: 1px 1px 8px 1px slategrey;
+            border-radius: 10px;
+        }
+        .head2{
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <div class="container">
+        <div class="head">
+            <marquee scrollamount="5px">
+                <p class="marquee">Logged in as "{{ Name }}"</p>
+            </marquee>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+        <div id="bdy" class="container">
+            <br>
+            <div align="center" class="container">
+                <p><img class="img" src="../static/images/profile.jpeg" alt="profile"><h1>User Details</h1></p>
+            </div>
+            
+            <div class="head2">
+                <div class="container" align="center">
+                    <img class="img2" src="../static/images/profile2.jpeg" alt="profile pic">
+                </div>
+                <h4><p id="head">Name</p><p id="body">{{Name}}</p></h4><br>
+                <h4><p id="head">Email Id</p><p id="body">{{Email}}</p></h4><br>
+                <h4><p id="head">Phone Number</p><p id="body">{{Phone}}</p></h4><br>
+            </div>
+            
+
+            <!--<div id="broke" class="row" align="center">
+                <img src="../static/images/broke.jpg" alt="broken">
+            </div>
+            <ul id="details">
+                {% for detail in details %}
+                    <li>{{ detail }}</li>
+                {% endfor %}
+            </ul>-->
+        </div>
+    </div>
+    <br>
+    <!--<script>
+        setInterval(
+            function () {
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = "#"+randomColor;
+            },1000);
+    </script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+</body>
+</html>

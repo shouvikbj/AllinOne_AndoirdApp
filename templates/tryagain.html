@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+ 
+		<!-- If IE use the latest rendering engine -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		
+		<!-- Set the page to the width of the device and set the zoon level -->
+		<meta name="viewport" content="width = device-width, initial-scale = 1">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		
+		<title>Try Again</title>
+		<style>
+			.button1 {
+			  background-color: blue;
+			  border: none;
+			  color: white;
+			  padding: 15px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 2px;
+			  cursor: pointer;
+			  transition : 0.2s;
+			  border-radius : 5%;
+			  font-family: "Comic Sans MS", cursive, sans-serif;
+			  width: 90%;
+			}
+			.button1:hover {
+				background-color : blue;
+				border : none;
+				color : white;
+				border-radius: 5%;
+				width: 100%;
+				font-family: "Comic Sans MS", cursive, sans-serif;
+			}
+			.button2 {
+			  border: none;
+			  background-color : red;
+			  color : white;
+			  padding: 15px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 2px;
+			  cursor: pointer;
+			  transition: 0.2s;
+			  border-radius: 5%;
+			  font-family: "Comic Sans MS", cursive, sans-serif;
+			  width: 90%;
+			}
+			.button2:hover{
+				background-color: red;
+			  	border: none;
+			  	color: white;
+			  	border-radius: 5%;
+				width: 100%;
+			  	font-family: "Comic Sans MS", cursive, sans-serif;
+			}
+			.button3 {
+			  background-color: greenyellow;
+			  border: none;
+			  color: green;
+			  padding: 15px 32px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 2px;
+			  cursor: pointer;
+			  transition : 0.2s;
+			  border-radius : 5%;
+			  font-family: "Comic Sans MS", cursive, sans-serif;
+			  width: 90%;
+			}
+			.button3:hover {
+				background-color : greenyellow;
+				border : none;
+				color : green;
+				border-radius: 5%;
+				width: 100%;
+				font-family: "Comic Sans MS", cursive, sans-serif;
+			}
+			h1{
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				color: orangered;
+				font-size: 200%;
+				transition: 0.3s;
+				text-shadow: 2px 2px blue;
+			}
+			h1:hover {
+				font-family: "Comic Sans MS", cursive, sans-serif;
+				color: indigo;
+				text-shadow: 2px 2px orange;
+			}
+			input[type=text], select {
+				  width: 90%;
+				  padding: 12px 20px;
+				  margin: 5px 0;
+				  display: inline-block;
+				  border: 3px solid lightblue;
+				  border-radius: 10%;
+				  box-sizing: border-box;
+				  text-align: center;
+				  font-family: "Comic Sans MS", cursive, sans-serif;
+			}
+			input[type=text]:hover {
+				  width: 100%;
+				  padding: 12px 20px;
+				  margin: 5px 0;
+				  display: inline-block;
+				  border:2px solid blue;
+				  border-radius: 10%;
+				  box-sizing: border-box;
+				  text-align: center;
+				  transition: 0.5s;
+				  font-family: "Comic Sans MS", cursive, sans-serif;
+			}
+			input[type=password], select {
+				  width: 90%;
+				  padding: 12px 20px;
+				  margin: 5px 0;
+				  display: inline-block;
+				  border: 3px solid lightblue;
+				  border-radius: 10%;
+				  box-sizing: border-box;
+				  text-align: center;
+				  font-family: "Comic Sans MS", cursive, sans-serif;
+			}
+			input[type=password]:hover {
+				  width: 100%;
+				  padding: 12px 20px;
+				  margin: 5px 0;
+				  display: inline-block;
+				  border:2px solid blue;
+				  border-radius: 10%;
+				  box-sizing: border-box;
+				  text-align: center;
+				  transition: 0.5s;
+				  font-family: "Comic Sans MS", cursive, sans-serif;
+			}
+			hr{
+				border: 2px solid indigo;
+			}
+			hr:hover{
+				border: 2px solid blue;
+			}
+			.heading{
+				background-image: linear-gradient(blue,lightblue,white);
+				padding-top: 0%;
+				padding-bottom: 0%;
+				text-align: center;
+				height: 50%;
+				font-size: 150%;
+			}
+			.heading:hover{
+				background-image: linear-gradient(blue,lightblue,white);
+				background-color: white;
+				text-shadow: 2px 2px yellow;
+				transition: 0.5s;
+			}
+			.formcontent{
+				background-image: linear-gradient(lightblue,white);
+			}
+			.formcontent:hover{
+				background-image: linear-gradient(lightblue,lightblue,white);
+			}
+			
+		</style>
+	</head>
+	<body class="body">
+		<div class="container">
+		<div class="heading">
+			<h4 class="heading"><strong><br><br>Try Again<br><br></strong></h4>
+		</div>
+		<div align="center" class="formcontent">
+			<form action="/" method="post" class="formcontent">
+				<hr>
+				<div class="formcontent">
+					<div>
+                        <h1><br><br>Username Already Exists</h1>
+                    </div>
+					<div>
+						<br><br><br><a href="/"><input class="button1" value="Login"></a>
+					</div>
+                    <div>
+						<br><br>
+						<a href="/register"><input class="button3" value="Register" ></a>
+                    </div>
+					
+				</div>
+			</form>
+		</div>
+		</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+	</body>
+</html>
